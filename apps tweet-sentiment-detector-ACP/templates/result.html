@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Résultat de l'analyse de sentiment</title>
+    <link href="/static/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <strong>L’analyse des sentiments des Tweets en Anglais</strong>
+        </div>
+    </header>
+
+    <div class="ml-container">
+        <h1 class="result-title">Résultat sentiment du tweet</h1>
+        <div class="results">
+            {% if prediction == 1 %}
+                <center>
+                    <h2 class="negative">C'est un tweet de sentiment négatif</h2>
+                </center>
+            {% elif prediction == 0 %}
+                <center>
+                    <h2 class="positive">C'est un tweet de sentiment positif</h2>
+                </center>
+            {% endif %}
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Machine Learning App with Flask</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <strong>L’analyse des sentiments des Tweets en Anglais</strong>
+        </div>
+    </header>
+
+    <div class="ml-container">
+        <form action="{{ url_for('predict') }}" method="POST">
+            <center>
+                <p>Entrer votre Tweet ici</p>
+                <textarea name="v2" rows="4" cols="50"></textarea>
+                <br/>
+                <input type="submit" class="btn-info" value="Predict">
+            </center>
+        </form>
+    </div>
+</body>
+</html>
